@@ -1,0 +1,62 @@
+.title {
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.ratingNum {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.stars {
+    margin-top: 5px;
+    display: flex;
+}
+.star {
+    margin-right: 6px;
+    width: 16px;
+}
+
+
+.numReviews {
+    margin-top: 10px;
+    font-size: small;
+    margin-bottom: 20px;
+}
+
+
+
+.ratingBar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.ratingNumber {
+    width: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: small;
+    
+}
+
+.actualBar {
+    width: 100%;
+}
+.ratingBarFilled {
+    position: relative;
+    top: 5px;
+    background-color: white;
+    height: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.ratingBarUnfilled{
+    position: relative;
+    top: -5px;
+    background-color: #383029;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,42 @@
+.title {
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.all {
+    width: 100%;
+}
+
+.widget {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-style: solid;
+    border-color: #383029;
+    border-radius: 5px;
+    font-size: small;
+}
+
+.content {
+    font-size: small;
+    color: white;
+}
+.name {
+    font-size: small;
+    color: grey;
+}
+.buttons {
+    display: flex;
+}
+.button {
+    width: 15px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+.count {
+    padding-right: 5px;
+}

@@ -1,0 +1,58 @@
+.header {
+    margin-top: 10px;
+    color : white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.comment {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: small;
+}
+
+.profilePhoto {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.commentHeader {
+    display: flex;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.time {
+    color: grey;
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.like {
+    width: 15px;
+    padding-top: 5px;
+}
+.dislike {
+    width: 15px;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.likeCount {
+    padding-top: 5px;
+    width: 15px;
+    text-align: center;
+    
+}
