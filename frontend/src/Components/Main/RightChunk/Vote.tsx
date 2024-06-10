@@ -1,5 +1,5 @@
 import VoteWidget from "./VoteWidget";
-import VoteStyles from '../../Stylesheets/RightChunk/Vote.module.css'
+import VoteStyles from '../../../Stylesheets/Main/RightChunk/Vote.module.css'
 export default function Vote() {
     return (
         <div className={VoteStyles.all}>

@@ -1,9 +1,9 @@
-import CommentSectionStyles from '../../Stylesheets/LeftChunk/CommentSection.module.css'
-import likeFilled from '../../Resources/like_filled.png'
-//import likeUnfilled from '../../Resources/like_unfilled.png'
+import CommentSectionStyles from '../../../Stylesheets/Main/LeftChunk/CommentSection.module.css'
+import likeFilled from '../../../Resources/like_filled.png'
+//import likeUnfilled from '../../../Resources/like_unfilled.png'
 
-//import dislikeFilled from '../../Resources/dislike_filled.png'
-import dislikeUnfilled from '../../Resources/dislike_unfilled.png'
+//import dislikeFilled from '../../../Resources/dislike_filled.png'
+import dislikeUnfilled from '../../../Resources/dislike_unfilled.png'
 
 
 export default function Comment() {

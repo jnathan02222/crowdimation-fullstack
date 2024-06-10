@@ -1,4 +1,4 @@
-import CommentSectionStyles from '../../Stylesheets/LeftChunk/CommentSection.module.css'
+import CommentSectionStyles from '../../../Stylesheets/Main/LeftChunk/CommentSection.module.css'
 import Comment from './Comment';
 
 export default function CommentSection() {

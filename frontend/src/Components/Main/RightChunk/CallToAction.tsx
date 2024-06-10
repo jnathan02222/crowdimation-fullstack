@@ -1,4 +1,4 @@
-import CallToActionStyles from '../../Stylesheets/RightChunk/CallToAction.module.css'
+import CallToActionStyles from '../../../Stylesheets/Main/RightChunk/CallToAction.module.css'
 
 export default function CallToAction() {
     return (

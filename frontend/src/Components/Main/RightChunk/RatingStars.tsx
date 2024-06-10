@@ -1,7 +1,7 @@
-import RatingStyles from "../../Stylesheets/RightChunk/Rate.module.css"
-import filledStar from "../../Resources/star_filled.png"
-import unfilledStar from "../../Resources/star_unfilled.png"
-import halfStar from "../../Resources/star_half.png"
+import RatingStyles from "../../../Stylesheets/Main/RightChunk/Rate.module.css"
+import filledStar from "../../../Resources/star_filled.png"
+import unfilledStar from "../../../Resources/star_unfilled.png"
+import halfStar from "../../../Resources/star_half.png"
 
 export default function RatingStars({stars} : {stars : number}) {
     function starsToArray(){
@@ -10,10 +10,10 @@ export default function RatingStars({stars} : {stars : number}) {
             list.push(filledStar)
         }
         for(let i : number = 0; i < Math.ceil(stars)-Math.floor(stars); i++){
-            list.push(unfilledStar)
+            list.push(halfStar)
         }
         for(let i : number = 0; i < 5-Math.ceil(stars); i++){
-            list.push(halfStar)
+            list.push(unfilledStar)
         }
         return list
     }

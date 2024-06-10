@@ -1,8 +1,8 @@
-import VoteStyles from '../../Stylesheets/RightChunk/Vote.module.css'
-import upvoteFilled from '../../Resources/upvote_filled.png' 
-//import upvoteUnfilled from '../../Resources/upvote_unfilled.png' 
-//import downvoteFilled from '../../Resources/dowmvote_filled.png' 
-import downvoteUnfilled from '../../Resources/downvote_unfilled.png' 
+import VoteStyles from '../../../Stylesheets/Main/RightChunk/Vote.module.css'
+import upvoteFilled from '../../../Resources/upvote_filled.png' 
+//import upvoteUnfilled from '../../../Resources/upvote_unfilled.png' 
+//import downvoteFilled from '../../../Resources/dowmvote_filled.png' 
+import downvoteUnfilled from '../../../Resources/downvote_unfilled.png' 
 
 export default function VoteWidget() {
     const count : number = 10

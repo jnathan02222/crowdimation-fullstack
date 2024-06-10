@@ -1,8 +1,9 @@
 
-import VideoPlayerStyles from "../../Stylesheets/LeftChunk/VideoPlayer.module.css"
+import SuggestionStyles from "../../../Stylesheets/VideoViewer/Suggestions/Suggestions.module.css"
 import React, {useEffect, useRef, useState} from 'react'
+import RatingStars from "../../Main/RightChunk/RatingStars";
 
-export default  function VideoPlayer() {
+export default  function Video() {
     const playerRef = useRef<HTMLInputElement>(null);
     const [height, setHeight] = useState(0);
 
@@ -19,11 +20,13 @@ export default  function VideoPlayer() {
     ,[])
 
     return (
-        <div ref={playerRef} className={VideoPlayerStyles.content} style={{height: height}}>
-            
+        <div className={SuggestionStyles.widget} >
+            <div ref={playerRef} className={SuggestionStyles.video} style={{height: height}}></div>
+            <div>
+                <div className={SuggestionStyles.name}>Name of Movie</div>
+                <div className={SuggestionStyles.author}>Author</div>
+                <RatingStars stars={4.5}></RatingStars>
+            </div>
         </div>
     );
 }
-
-
-  

@@ -1,4 +1,4 @@
-import RatingStyles from '../../Stylesheets/RightChunk/Rate.module.css'
+import RatingStyles from '../../../Stylesheets/Main/RightChunk/Rate.module.css'
 
 export default function RatingBar({num, percent} : {num : number, percent : number}) {
     return (

@@ -1,6 +1,6 @@
 import RatingBar from "./RatingBar";
 import RatingStars from "./RatingStars";
-import RatingStyles from '../../Stylesheets/RightChunk/Rate.module.css'
+import RatingStyles from '../../../Stylesheets/Main/RightChunk/Rate.module.css'
 
 export default function Rate() {
     const rating : number = 4.5
