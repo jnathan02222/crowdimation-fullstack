@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './Components/App';
+import App from './Pages/App';
 import reportWebVitals from './reportWebVitals';
 
 const rootElem = document.getElementById('root') as HTMLElement
