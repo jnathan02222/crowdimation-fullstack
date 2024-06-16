@@ -6,11 +6,8 @@ import {useState, useEffect} from 'react'
 
 export default function VideoSlider({title, numShows} : {title : string, numShows : number}) {
     const [numOnScreen, setNumOnScreen] = useState<number>(5)
-    const [videoWidth, setVideoWidth] = useState<number>(0)
-
     const [index, setIndex] = useState<number>(0)
     const [showTransition, setShowTransition] = useState<boolean>(true)
-
 
     //Amount of scroll + scroll at end X
     //Fix resizing
@@ -86,34 +83,36 @@ export default function VideoSlider({title, numShows} : {title : string, numShow
 
     function getStyle(){
         if(index === lastIndex() && numShows%numOnScreen !== 0){
-            return {left: (-(((index-1)*numOnScreen)+(numShows%numOnScreen))*(videoWidth+10)).toString() + "px"}
+
+            //(index-1)*100)+(numShows%numOnScreen)*(100/numOnScreen)
+            const videoWidth = 100/numOnScreen
+            return {left: "calc(-" + (((index-1)*100)+(numShows%numOnScreen)*videoWidth).toString() + "% + 35px)"}
         }
-        return {left: (-index*numOnScreen*(videoWidth+10)).toString() + "px"}
+        return {left: "calc(" + (-index*100).toString() + "% + 35px)"}
     }
 
     return (
         <div className={VideoSliderStyles.container} >
             <div className={VideoSliderStyles.title}>{title}</div>
             <div className={VideoSliderStyles.sliderContainer}>
-                <div className={VideoSliderStyles.arrowContainerLeft + " " + (index === 0 && VideoSliderStyles.hide)}>
+                <div className={VideoSliderStyles.arrowContainer + " " + VideoSliderStyles.arrowContainerLeft + " " + (index === 0 && VideoSliderStyles.hide)}>
                     <img onClick={moveLeft} draggable="false" className={VideoSliderStyles.arrow } alt="Left arrow" src={leftArrow}></img>
                 </div>
                 <div className={VideoSliderStyles.slider + " " + (showTransition && VideoSliderStyles.showTransition)} style={getStyle()}>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85} updateWidth={setVideoWidth}></Video>
-                    
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
+                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={1.85}></Video>
                 </div>
-                <div className={VideoSliderStyles.arrowContainerRight + " " + (index === lastIndex() && VideoSliderStyles.hide)}>
+                <div className={VideoSliderStyles.arrowContainer + " " + VideoSliderStyles.arrowContainerRight + " " + (index === lastIndex() && VideoSliderStyles.hide)}>
                     <img onClick={moveRight} draggable="false" className={VideoSliderStyles.arrow} alt="Right arrow" src={rightArrow}></img>
                 </div>
             </div>

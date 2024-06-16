@@ -6,7 +6,7 @@ export default  function VideoWithDescription() {
 
     return (
         <div className={SuggestionStyles.widget} >
-            <Video updateWidth={()=>{}} widthStyle={"50%"} heightRatio={1.85}></Video>
+            <Video  widthStyle={"50%"} heightRatio={1.85}></Video>
             <div>
                 <div className={SuggestionStyles.name}>Name of Movie</div>
                 <div className={SuggestionStyles.author}>Author</div>
