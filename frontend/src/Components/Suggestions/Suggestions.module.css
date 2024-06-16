@@ -6,10 +6,9 @@
 
 .video {
   cursor: pointer;
-  background-color: grey; 
+  background-color: white; 
   border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
+  margin: 5px;
 }
 
 .name {
@@ -18,4 +17,8 @@
 
 .author {
   color: grey;
+}
+
+.textDiv {
+  margin-left: 10px;
 }

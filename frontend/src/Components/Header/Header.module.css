@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 
@@ -27,6 +28,8 @@
     font-weight: bold;
     font-size: large;
     padding-left: 15px;
+    text-decoration: none; 
+
 }
 .title:hover {
     cursor: pointer;
@@ -41,6 +44,8 @@
     color: white;
     margin-left: 15px;
     margin-right: 15px;
+    text-decoration: none; 
+
 }
 .item:hover {
     cursor: pointer;

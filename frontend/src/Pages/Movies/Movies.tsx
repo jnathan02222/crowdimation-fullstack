@@ -1,15 +1,14 @@
-import AppStyles from '../App.module.css'
-import Header from '../../Components/Header/Header';
+
 import SearchBar from '../../Components/SearchBar/SearchBar';
-import VideoSlider from '../../Components/VideoSlider/VideoSlider';
-export default function Main() {
+import Slider from '../../Components/Slider/Slider';
+
+export default function Movies() {
   return (
-    <div className={AppStyles.app}>
-      <Header></Header>
+    <div>
       <SearchBar></SearchBar>
-      <VideoSlider numShows={12} title="Action"></VideoSlider>
-      <VideoSlider numShows={12} title="Fantasy"></VideoSlider>
-      <VideoSlider numShows={12} title="Comedy"></VideoSlider>
+      <Slider heightRatio={1.85} numShows={12} title="Action"></Slider>
+      <Slider heightRatio={1.85} numShows={12} title="Fantasy"></Slider>
+      <Slider heightRatio={1.85} numShows={12} title="Comedy"></Slider>
     </div>
   );
 }
