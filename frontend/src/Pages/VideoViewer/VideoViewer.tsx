@@ -11,7 +11,7 @@ export default function VideoViewer() {
     <div>
       <div className={AppStyles.content}>
         <div className={AppStyles.leftChunk}>
-          <VideoPlayer></VideoPlayer>
+          <VideoPlayer widthStyle=''></VideoPlayer>
           <CommentSection></CommentSection>
         </div>
         <div className={AppStyles.rightChunk}>

@@ -1,0 +1,54 @@
+.banner {
+    background-color: white;
+    margin-left: 35px;
+    width: calc(100% - 70px);
+    aspect-ratio: 8 / 1;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.description {
+    margin-top: 70px;
+    
+    margin-left: 35px;
+    display: flex;
+}
+
+
+.profilePhoto{
+    width: 200px;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 100px;
+    margin-right: 50px;
+}
+.title {
+    margin-top: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.info {
+    margin-top: 10px;
+}
+.desc {
+    margin-top: 10px;
+}
+
+.featured {
+    margin-top: 60px;
+    margin-left: 35px;
+    display: flex;
+}
+
+.trailerInfo {
+    margin-left: 20px;
+    width: 40%;
+}
+
+.trailerTitle {
+    font-weight: bold;
+}
+
+.trailerDesc {
+    margin-top: 10px;
+}

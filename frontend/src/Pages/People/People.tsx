@@ -6,8 +6,8 @@ export default function People() {
   return (
     <div>
       <SearchBar></SearchBar>
-      <Slider heightRatio={1.1} numShows={12} title="Top"></Slider>
-      <Slider heightRatio={1.1} numShows={12} title="Trending"></Slider>
+      <Slider linkPrefix="/channel" useBigSlider={false} heightRatio={1.1} numShows={12} title="Top"></Slider>
+      <Slider linkPrefix="/channel" useBigSlider={false} heightRatio={1.1} numShows={12} title="Trending"></Slider>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 .header {
+    background-color: #181411;
     height: 60px;
     border: 0px;
     border-bottom: 2px;
@@ -7,7 +8,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position:sticky;
+    top: 0;
+    z-index: 10;
 }
 
 
@@ -64,7 +67,6 @@
 .create:hover {
     color: #000000;
     background-color: #c76d14;
-    
 }
 .join {
     background-color: #383029;

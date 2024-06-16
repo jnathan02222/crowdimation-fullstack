@@ -4,8 +4,8 @@ import leftArrow from '../../Resources/arrow_left.png'
 import rightArrow from '../../Resources/arrow_right.png'
 import {useState, useEffect, useCallback} from 'react'
 
-export default function Slider({title, numShows, heightRatio} : {title : string, numShows : number, heightRatio : number}) {
-    const [numOnScreen, setNumOnScreen] = useState<number>(5)
+export default function Slider({title, numShows, heightRatio, useBigSlider, linkPrefix} : {title : string, numShows : number, heightRatio : number, useBigSlider : boolean, linkPrefix : string}) {
+    const [numOnScreen, setNumOnScreen] = useState<number>(1)
     const [index, setIndex] = useState<number>(0)
     const [showTransition, setShowTransition] = useState<boolean>(true)
     
@@ -21,7 +21,7 @@ export default function Slider({title, numShows, heightRatio} : {title : string,
                 setShowTransition(false)
             }
             
-            const changeNumOnScreen = () => {
+            let changeNumOnScreen = () => {
                 function getUpdater(num : number){
                     return () => {
                         //Queue up an index change which will run after lastIndex is updated
@@ -47,6 +47,9 @@ export default function Slider({title, numShows, heightRatio} : {title : string,
                     setNumOnScreen(getUpdater(5))
                 }
             }
+            if(useBigSlider){
+                changeNumOnScreen = () => {}
+            }
             changeNumOnScreen();
 
             window.addEventListener('resize', disableSliding)
@@ -56,7 +59,7 @@ export default function Slider({title, numShows, heightRatio} : {title : string,
                 window.removeEventListener('resize', changeNumOnScreen)
             }
         }
-    , [lastIndex])
+    , [lastIndex, useBigSlider])
 
   
    
@@ -105,18 +108,18 @@ export default function Slider({title, numShows, heightRatio} : {title : string,
                     <img onClick={moveLeft} draggable="false" className={SliderStyles.arrow } alt="Left arrow" src={leftArrow}></img>
                 </div>
                 <div className={SliderStyles.slider + " " + (showTransition && SliderStyles.showTransition)} style={getStyle()}>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
-                    <Video widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
+                    <Video link={linkPrefix} widthStyle={(100/numOnScreen).toString() + "%"} heightRatio={heightRatio}></Video>
                 </div>
                 <div className={SliderStyles.arrowContainer + " " + SliderStyles.arrowContainerRight + " " + (index === lastIndex() && SliderStyles.hide)}>
                     <img onClick={moveRight} draggable="false" className={SliderStyles.arrow} alt="Right arrow" src={rightArrow}></img>

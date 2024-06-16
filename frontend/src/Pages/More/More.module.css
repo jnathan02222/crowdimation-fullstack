@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 50px;
+    width: 70%;
+}
+.title {
+    font-size: x-large;
+    font-weight: bold;
+}
+.subtitle {
+    margin-top: 10px;
+    font-size: large;
+    color: rgb(189, 189, 189);
+}
+
+.text {
+    margin-top: 10px;
+    color: rgb(189, 189, 189);
+}

@@ -1,11 +1,13 @@
 
 import SuggestionStyles from "./Suggestions.module.css"
-
-export default  function Video({widthStyle, heightRatio} : {widthStyle : string, heightRatio : number}) {
+import {Link} from 'react-router-dom'
+export default  function Video({widthStyle, heightRatio, link} : {widthStyle : string, heightRatio : number, link : string}) {
 
     return (
         <div style={{width: widthStyle, flexShrink: 0}}>
-            <div className={SuggestionStyles.video} style={{aspectRatio: heightRatio / 1}}></div>
+            <Link to={link}>
+                <div className={SuggestionStyles.video} style={{aspectRatio: heightRatio / 1}}></div>
+            </Link>
         </div>
         
     );
